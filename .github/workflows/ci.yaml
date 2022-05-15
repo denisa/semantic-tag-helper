@@ -1,0 +1,66 @@
+name: ci
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - '*'
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3.0.2
+    - name: Validate the changelog
+      uses: denisa/clq-action@v1
+      id: clq-validate
+      with:
+        changeMap: .github/clq/changemap.json
+        mode: feature
+    - name: Echo changelog values
+      run: |
+        echo "$release_name"
+        echo "$release_tag -- $release_status"
+        echo "$body"
+      env:
+        release_tag: ${{ steps.clq-validate.outputs.tag }}
+        release_name: ${{ steps.clq-validate.outputs.name }}
+        release_status: ${{ steps.clq-validate.outputs.status }}
+        body: ${{ steps.clq-validate.outputs.changes }}
+  validate-release:
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3.0.2
+    - name: Extract tag from the changelog
+      uses: denisa/clq-action@v1
+      id: clq-extract
+      with:
+        changeMap: .github/clq/changemap.json
+        mode: release
+    - name: Validate the tag has not yet been used
+      env:
+        mode: test
+        tag: ${{ steps.clq-extract.outputs.tag }}
+      run: ./action.sh
+  tag:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [ test, validate-release ]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3.0.2
+    - uses: denisa/clq-action@v1
+      id: clq-extract
+      with:
+        changeMap: .github/clq/changemap.json
+    - name: Create tags
+      env:
+        mode: set
+        tag: ${{ steps.clq-extract.outputs.tag }}
+      run: ./action.sh
+    - uses: ncipollo/release-action@v1.10.0
+      with:
+        tag: ${{ steps.clq-extract.outputs.tag }}
+        prerelease: ${{ steps.clq-extract.outputs.status == 'prereleased' }}
+        name: ${{ steps.clq-extract.outputs.name }}
+        body: ${{ steps.clq-extract.outputs.changes }}
