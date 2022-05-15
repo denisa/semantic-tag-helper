@@ -1,0 +1,17 @@
+name: 'Changelog Query'
+description: 'Validate the changelog file and extract current release information'
+inputs:
+    tag:
+        description: 'the tag to set'
+        required: true
+    mode:
+        description: 'whether to test for the tag existence or set it, one of "test" or "set"'
+        required: true
+runs:
+    using: "composite"
+    steps:
+        - runs: actions.sh
+          env:
+            tag:  ${{ input.tag }}
+            mode: ${{ inputs.mode }}
+
