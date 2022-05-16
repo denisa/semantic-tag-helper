@@ -32,14 +32,14 @@ One of `test` or `set`.
 This build validates that the tag does not exist.
 To that effect, add
 ```yaml
-    - id: clq-extract
-      uses: denisa/clq-action@v1.1
-      with:
-        mode: feature
-	- uses: denisa/semantic-tag-helper@v1
-	  with:
-	  	mode: test
-	  	tag: ${{ steps.clq-extract.outputs.tag }}
+- id: clq-extract
+  uses: denisa/clq-action@v1.1
+  with:
+    mode: feature
+- uses: denisa/semantic-tag-helper@v1
+  with:
+    mode: test
+    tag: ${{ steps.clq-extract.outputs.tag }}
 ```
 
 
@@ -47,16 +47,16 @@ To that effect, add
 This build must extract from the changelog all the information needed to cut a new release.
 Use
 ```yaml
-    - uses: denisa/clq-action@v1
-      id: clq-extract
-	- uses: denisa/semantic-tag-helper@v1
-	  with:
-	  	mode: set
-	  	tag: ${{ steps.clq-extract.outputs.tag }}
-    - uses: ncipollo/release-action@v1.10.0
-      with:
-        tag: ${{ steps.clq-extract.outputs.tag }}
-        prerelease: ${{ steps.clq-extract.outputs.status == 'prereleased' }}
-        name: ${{ steps.clq-extract.outputs.name }}
-        body: ${{ steps.clq-extract.outputs.changes }}
+- uses: denisa/clq-action@v1
+  id: clq-extract
+- uses: denisa/semantic-tag-helper@v1
+  with:
+	mode: set
+	tag: ${{ steps.clq-extract.outputs.tag }}
+- uses: ncipollo/release-action@v1.10.0
+  with:
+	tag: ${{ steps.clq-extract.outputs.tag }}
+	prerelease: ${{ steps.clq-extract.outputs.status == 'prereleased' }}
+	name: ${{ steps.clq-extract.outputs.name }}
+	body: ${{ steps.clq-extract.outputs.changes }}
 ```
