@@ -1,17 +1,18 @@
-name: 'Changelog Query'
-description: 'Validate the changelog file and extract current release information'
+name: semantic-helper-tag
+description: 'Ensure a tag does not exit and create/move the tags'
 inputs:
-    tag:
-        description: 'the tag to set'
-        required: true
-    mode:
-        description: 'whether to test for the tag existence or set it, one of "test" or "set"'
-        required: true
+  tag:
+    description: 'the tag to set'
+    required: true
+  mode:
+    description: 'whether to test for the tag existence or set it, one of "test" or "set"'
+    required: true
 runs:
-    using: "composite"
-    steps:
-        - run: actions.sh
-          env:
-            tag:  ${{ input.tag }}
-            mode: ${{ inputs.mode }}
+  using: "composite"
+  steps:
+    - run: actions.sh
+      shell: bash
+      env:
+        tag:  ${{ inputs.tag }}
+        mode: ${{ inputs.mode }}
 
