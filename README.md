@@ -51,12 +51,12 @@ Use
   id: clq-extract
 - uses: denisa/semantic-tag-helper@v1
   with:
-	mode: set
-	tag: ${{ steps.clq-extract.outputs.tag }}
+    mode: set
+    tag: ${{ steps.clq-extract.outputs.tag }}
 - uses: ncipollo/release-action@v1.10.0
   with:
-	tag: ${{ steps.clq-extract.outputs.tag }}
-	prerelease: ${{ steps.clq-extract.outputs.status == 'prereleased' }}
-	name: ${{ steps.clq-extract.outputs.name }}
-	body: ${{ steps.clq-extract.outputs.changes }}
+    tag: ${{ steps.clq-extract.outputs.tag }}
+    prerelease: ${{ steps.clq-extract.outputs.status == 'prereleased' }}
+    name: ${{ steps.clq-extract.outputs.name }}
+    body: ${{ steps.clq-extract.outputs.changes }}
 ```
