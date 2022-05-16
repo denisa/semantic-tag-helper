@@ -10,7 +10,7 @@ inputs:
 runs:
     using: "composite"
     steps:
-        - runs: actions.sh
+        - run: actions.sh
           env:
             tag:  ${{ input.tag }}
             mode: ${{ inputs.mode }}
