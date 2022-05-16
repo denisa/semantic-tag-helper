@@ -17,6 +17,10 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
    - `Fixed` for any bug fixes.
    - `Security` in case of vulnerabilities.
 
+## [1.0.3] - 2022-05-15
+### Fixed
+- action.yml Dis not working reference wrong script
+
 ## [1.0.2] - 2022-05-15
 ### Fixed
 - action.yml is not working
