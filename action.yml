@@ -10,7 +10,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: action.sh
+    - run: ./action.sh
       shell: bash
       env:
         tag:  ${{ inputs.tag }}
