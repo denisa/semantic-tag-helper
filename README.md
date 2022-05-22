@@ -1,6 +1,7 @@
 # semantic-tag-helper
 [![version](https://img.shields.io/github/v/release/denisa/semantic-tag-helper?include_prereleases&sort=semver)](https://github.com/denisa/semantic-tag-helper/releases)
 [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-informational)](https://semver.org/spec/v2.0.0.html)
+[![Lint Code Base](https://github.com/denisa/semantic-tag-helper/actions/workflows/linter.yaml/badge.svg)](https://github.com/denisa/semantic-tag-helper/actions/workflows/linter.yaml)
 
 GitHub action to help set a semantic tag, keeping major and minor tags current.
 
