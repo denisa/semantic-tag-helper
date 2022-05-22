@@ -20,11 +20,11 @@ and create or move `v1.2.3-alpha.4.5`, `v1.2.3-alpha.4`, `v1.2.3-alpha`.
 
 ## Inputs
 
-### `tag`
-The name of the tag. The tag _must_ adhere to semver 2.0.0 and _should_ start with a `v`.
-
 ### `mode`
 One of `test` or `set`.
+
+### `tag`
+The name of the tag. The tag _must_ adhere to semver 2.0.0 and _should_ start with a `v`.
 
 ## Example Usage
 
@@ -33,7 +33,7 @@ This build validates that the tag does not exist.
 To that effect, add
 ```yaml
 - id: clq-extract
-  uses: denisa/clq-action@v1.1
+  uses: denisa/clq-action@v1
   with:
     mode: feature
 - uses: denisa/semantic-tag-helper@v1
@@ -41,7 +41,6 @@ To that effect, add
     mode: test
     tag: ${{ steps.clq-extract.outputs.tag }}
 ```
-
 
 ### Release Branch
 This build must extract from the changelog all the information needed to cut a new release.
