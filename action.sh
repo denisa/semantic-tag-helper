@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 set -eu
 
 function does_tag_exist() {
