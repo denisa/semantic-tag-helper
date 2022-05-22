@@ -1,18 +1,14 @@
 name: semantic-helper-tag
 description: 'Ensure a tag does not exit and create/move the tags'
 inputs:
-  tag:
-    description: 'the tag to set'
-    required: true
   mode:
     description: 'whether to test for the tag existence or set it, one of "test" or "set"'
+    required: true
+  tag:
+    description: 'the tag to set'
     required: true
 runs:
   using: "composite"
   steps:
     - run: ./action.sh
-      shell: bash
-      env:
-        tag:  ${{ inputs.tag }}
-        mode: ${{ inputs.mode }}
-
+      shell: bash ${{ inputs.mode }} ${{ inputs.tag }}
