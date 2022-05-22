@@ -1,11 +1,11 @@
 ---
-name: Lint Code Base
+name: linter
 on:
   push:
   pull_request:
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -13,6 +13,6 @@ jobs:
           fetch-depth: 0
       - uses: github/super-linter/slim@v4
         env:
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
