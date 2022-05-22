@@ -3,6 +3,7 @@ set -eu
 function does_tag_exist() {
   local tag="$1"
   echo "Testing tag $tag"
+
   if git ls-remote --exit-code --tags origin "refs/tags/$tag" >/dev/null 2>&1; then
     echo "::error ::tag $tag exists already"
     exit 1
