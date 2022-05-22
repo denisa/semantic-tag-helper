@@ -13,8 +13,8 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 - _minor_ release trigger:
    - `Added` for new features.
    - `Deprecated` for soon-to-be removed features.
-- _bug-fix_ release trigger:
-   - `Fixed` for any bug fixes.
+- _bugfix_ release trigger:
+   - `Fixed` for any bugfixes.
    - `Security` in case of vulnerabilities.
 
 ## [1.0.3] - 2022-05-15
