@@ -20,7 +20,6 @@ jobs:
           mode: feature
       - name: Validate the tag has not yet been used
         run: action.sh test ${{ steps.clq-validate.outputs.tag }}
-        shell: bash
       - name: Echo changelog values
         run: |
           echo "$release_name"
@@ -44,7 +43,6 @@ jobs:
           mode: release
       - name: Validate the tag has not yet been used
         run: action.sh test ${{ steps.clq-extract.outputs.tag }}
-        shell: bash
   tag:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: [test, validate-release]
@@ -57,7 +55,6 @@ jobs:
           changeMap: .github/clq/changemap.json
       - name: Create tags
         run: action.sh set ${{ steps.clq-extract.outputs.tag }} 
-        shell: bash
       - uses: ncipollo/release-action@v1.10.0
         with:
           tag: ${{ steps.clq-extract.outputs.tag }}
