@@ -18,8 +18,6 @@ jobs:
         with:
           changeMap: .github/clq/changemap.json
           mode: feature
-      - name: Validate the tag has not yet been used
-        run: action.sh test ${{ steps.clq-validate.outputs.tag }}
       - name: Echo changelog values
         run: |
           echo "$release_name"
@@ -30,6 +28,9 @@ jobs:
           release_name: ${{ steps.clq-validate.outputs.name }}
           release_status: ${{ steps.clq-validate.outputs.status }}
           body: ${{ steps.clq-validate.outputs.changes }}
+      - name: Validate the tag has not yet been used
+        run: action.sh test ${{ steps.clq-validate.outputs.tag }}
+        shell: bash --verbose --noprofile --norc -eo pipefail {0}
   validate-release:
     if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
