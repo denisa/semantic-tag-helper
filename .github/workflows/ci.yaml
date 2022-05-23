@@ -30,7 +30,6 @@ jobs:
           body: ${{ steps.clq-validate.outputs.changes }}
       - name: Validate the tag has not yet been used
         run: action.sh test ${{ steps.clq-validate.outputs.tag }}
-        shell: bash --verbose --noprofile --norc -eo pipefail {0}
   validate-release:
     if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
