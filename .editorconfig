@@ -8,3 +8,11 @@ indent_size = 2
 
 [*.md]
 trim_trailing_whitespace = false
+
+[*.md]
+max_line_length = 400
+
+[LICENSE]
+insert_final_newline = unset
+indent_style = unset
+indent_size = unset

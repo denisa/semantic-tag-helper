@@ -42,19 +42,19 @@ function set_tag() {
 }
 
 if [ $# -ne 2 ]; then
-   echo "::error ::Expected arguments: (test|set) <tag>"
-   exit 1
+  echo "::error ::Expected arguments: (test|set) <tag>"
+  exit 1
 fi
 
 case "$1" in
-  test)
-    does_tag_exist "$2"
-    ;;
-  set)
-    set_tag "$2"
-    ;;
-   *)
-   echo "::error ::Mode $1 undefined, must be one of (test|set)"
-   exit 1
-   ;;
+test)
+  does_tag_exist "$2"
+  ;;
+set)
+  set_tag "$2"
+  ;;
+*)
+  echo "::error ::Mode $1 undefined, must be one of (test|set)"
+  exit 1
+  ;;
 esac
