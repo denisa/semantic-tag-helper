@@ -8,28 +8,34 @@ Keep the newest entry at top, format date according to ISO 8601: `YYYY-MM-DD`.
 
 Categories, defined in [changemap.json](.github/clq/changemap.json)):
 - _major_ release trigger:
-   - `Changed` for changes in existing functionality.
-   - `Removed` for now removed features.
+  - `Changed` for changes in existing functionality.
+  - `Removed` for now removed features.
 - _minor_ release trigger:
-   - `Added` for new features.
-   - `Deprecated` for soon-to-be removed features.
-- _bug-fix_ release trigger:
-   - `Fixed` for any bug fixes.
-   - `Security` in case of vulnerabilities.
+  - `Added` for new features.
+  - `Deprecated` for soon-to-be removed features.
+- _bugfix_ release trigger:
+  - `Fixed` for any bugfixes.
+  - `Security` in case of vulnerabilities.
 
-## [1.0.3] - 2022-05-15
+## [1.0.4] - 2022-05-24
 ### Fixed
-- action.yml Dis not working reference wrong script
+- uses the action.sh during own build
+- needs `${{ github.action_path }}` to execute correctly
+- introduce super linter, and fixes all violations
 
-## [1.0.2] - 2022-05-15
+## 1.0.3 - 2022-05-15 [YANKED]
+### Fixed
+- action.yml is not working reference wrong script
+
+## 1.0.2 - 2022-05-15 [YANKED]
 ### Fixed
 - action.yml is not working
 
-## [1.0.1] - 2022-05-15
+## 1.0.1 - 2022-05-15 [YANKED]
 ### Fixed
 - action.yml is not working
 - fix formatting
 
-## [1.0.0] - 2022-05-14
+## 1.0.0 - 2022-05-14 [YANKED]
 ### Added
 - test/set tag and derived tags
