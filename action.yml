@@ -12,5 +12,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ./action.sh ${{ inputs.mode }} ${{ inputs.tag }}
+    - run: ${{ github.action_path }}/action.sh ${{ inputs.mode }} ${{ inputs.tag }}
       shell: bash
