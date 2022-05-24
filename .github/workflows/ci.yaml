@@ -29,7 +29,10 @@ jobs:
           release_status: ${{ steps.clq-validate.outputs.status }}
           body: ${{ steps.clq-validate.outputs.changes }}
       - name: Validate the tag has not yet been used
-        run: action.sh test ${{ steps.clq-validate.outputs.tag }}
+        run: |
+          ls -la
+          which git
+          ./action.sh test ${{ steps.clq-validate.outputs.tag }}
   validate-release:
     if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
