@@ -17,9 +17,15 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
   - `Fixed` for any bugfixes.
   - `Security` in case of vulnerabilities.
 
+## [1.0.4] - 2022-05-24
+### Fixed
+- uses the acion.sh during own build
+- needs ./ to execute correctly
+- introduce super linter, and fixes all violations
+
 ## [1.0.3] - 2022-05-15
 ### Fixed
-- action.yml Dis not working reference wrong script
+- action.yml is not working reference wrong script
 
 ## [1.0.2] - 2022-05-15
 ### Fixed
