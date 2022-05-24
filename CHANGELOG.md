@@ -19,23 +19,23 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 ## [1.0.4] - 2022-05-24
 ### Fixed
-- uses the acion.sh during own build
-- needs ./ to execute correctly
+- uses the action.sh during own build
+- needs `${{ github.action_path }}` to execute correctly
 - introduce super linter, and fixes all violations
 
-## [1.0.3] - 2022-05-15
+## 1.0.3 - 2022-05-15 [YANKED]
 ### Fixed
 - action.yml is not working reference wrong script
 
-## [1.0.2] - 2022-05-15
+## 1.0.2 - 2022-05-15 [YANKED]
 ### Fixed
 - action.yml is not working
 
-## [1.0.1] - 2022-05-15
+## 1.0.1 - 2022-05-15 [YANKED]
 ### Fixed
 - action.yml is not working
 - fix formatting
 
-## [1.0.0] - 2022-05-14
+## 1.0.0 - 2022-05-14 [YANKED]
 ### Added
 - test/set tag and derived tags
