@@ -17,6 +17,10 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
   - `Fixed` for any bugfixes.
   - `Security` in case of vulnerabilities.
 
+## [1.0.5] - 2022-09-09
+### Fixed
+- use major version of ncipollo/release-action
+
 ## [1.0.4] - 2022-05-24
 ### Fixed
 - uses the action.sh during own build

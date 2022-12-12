@@ -54,8 +54,8 @@ jobs:
         with:
           changeMap: .github/clq/changemap.json
       - name: Create tags
-        run: ./action.sh set ${{ steps.clq-extract.outputs.tag }} 
-      - uses: ncipollo/release-action@v1.10.0
+        run: ./action.sh set ${{ steps.clq-extract.outputs.tag }}
+      - uses: ncipollo/release-action@v1
         with:
           tag: ${{ steps.clq-extract.outputs.tag }}
           prerelease: ${{ steps.clq-extract.outputs.status == 'prereleased' }}
