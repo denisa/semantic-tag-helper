@@ -20,6 +20,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 ## [1.0.5] - 2022-09-09
 ### Fixed
 - use major version of ncipollo/release-action
+- bump actions/checkout to v4
 
 ## [1.0.4] - 2022-05-24
 ### Fixed
