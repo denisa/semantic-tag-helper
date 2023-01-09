@@ -11,7 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.0.2
+      - uses: actions/checkout@v3.3.0
       - name: Validate the changelog
         uses: denisa/clq-action@v1
         id: clq-validate
@@ -34,7 +34,7 @@ jobs:
     if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.0.2
+      - uses: actions/checkout@v3.3.0
       - name: Extract tag from the changelog
         uses: denisa/clq-action@v1
         id: clq-extract
@@ -48,7 +48,7 @@ jobs:
     needs: [test, validate-release]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.0.2
+      - uses: actions/checkout@v3.3.0
       - uses: denisa/clq-action@v1
         id: clq-extract
         with:
