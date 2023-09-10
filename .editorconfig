@@ -16,3 +16,6 @@ max_line_length = 400
 insert_final_newline = unset
 indent_style = unset
 indent_size = unset
+
+[Makefile]
+indent_style = tab
