@@ -1,21 +1,21 @@
 ---
-name: linter
+name: "Lint Code Base"
 on:
   push:
+    branches:
+      - '**'
+    tags-ignore:
+      - '*'
   pull_request:
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.3.0
         with:
           fetch-depth: 0
-      - uses: github/super-linter/slim@v4
+      - run: cat .github/super-linter.env >> "$GITHUB_ENV"
+      - uses: github/super-linter@v5
         env:
-          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SUPPRESS_POSSUM: true
-          VALIDATE_ALL_CODEBASE: true
-          VALIDATE_GITLEAKS: false
-          VALIDATE_JSCPD: false
