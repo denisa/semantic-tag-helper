@@ -18,11 +18,18 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
   - `Fixed` for any bugfixes.
   - `Security` in case of vulnerabilities.
 
+## [1.0.7] - 2024-08-15
+
+### Fixed
+
+- Bumps github/super-linter from 5 to 6
+
 ## [1.0.6] - 2022-09-09
 
 ### Fixed
 
 - bump actions/checkout to v4 and use major version
+- minimize workflows permissions
 
 ## [1.0.5] - 2022-09-09
 

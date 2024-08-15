@@ -8,14 +8,20 @@ on:
       - '*'
   pull_request:
 
+permissions: {}
+
 jobs:
   lint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - run: cat .github/super-linter.env >> "$GITHUB_ENV"
-      - uses: github/super-linter@v5
+      - uses: github/super-linter@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
