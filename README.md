@@ -6,7 +6,7 @@
 
 ## Summary
 
-GitHub action to help set a semantic tag, keeping major and minor tags current.
+GitHub Action to help set a semantic tag, keeping major and minor tags current.
 
 This action is inspired by GitHub:
 "We recommend creating releases using semantically versioned tags – for example, v1.1.3 –

@@ -1,10 +1,12 @@
 .PHONY: superlinter
 superlinter:
 	docker run --rm \
+		--platform linux/amd64 \
 		-e RUN_LOCAL=true \
+		-e SHELL=/bin/bash \
 		--env-file ".github/super-linter.env" \
 		-w /tmp/lint -v "$(CURDIR):/tmp/lint" \
-		github/super-linter:v5
+		ghcr.io/super-linter/super-linter:v7
 
 .PHONY: shellcheck
 shellcheck:
