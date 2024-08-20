@@ -18,6 +18,13 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
   - `Fixed` for any bugfixes.
   - `Security` in case of vulnerabilities.
 
+## [1.0.8] - 2024-08-20
+
+### Fixed
+
+- Bump `super-linter/super-linter` from 6 to 7
+- Disable `prettier`, its opinion differs too much
+
 ## [1.0.7] - 2024-08-15
 
 ### Fixed
