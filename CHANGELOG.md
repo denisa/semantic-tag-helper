@@ -18,6 +18,16 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
   - `Fixed` for any bugfixes.
   - `Security` in case of vulnerabilities.
 
+## [1.0.11] - 2025-05-11
+
+### Fixed
+
+- Let the GITHUB_ACTOR be the Git user.
+- Disable `commitlint`.
+- Add missing CI badge for main.
+- Support workflow verbose mode.
+- Bump `shellcheck` to 0.10.0
+
 ## [1.0.10] - 2024-11-03
 
 ### Fixed

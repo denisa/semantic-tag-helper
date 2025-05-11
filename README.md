@@ -2,7 +2,8 @@
 
 [![version](https://img.shields.io/github/v/release/denisa/semantic-tag-helper?include*prereleases&sort=semver)](https://github.com/denisa/semantic-tag-helper/releases)
 [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-informational)](https://semver.org/spec/v2.0.0.html)
-[![linter](https://github.com/denisa/semantic-tag-helper/actions/workflows/linter.yaml/badge.svg)](https://github.com/denisa/semantic-tag-helper/actions/workflows/linter.yaml)
+[![linter](https://github.com/denisa/semantic-tag-helper/actions/workflows/linter.yaml/badge.svg?branch=main)](https://github.com/denisa/semantic-tag-helper/actions/workflows/linter.yaml?query=branch%3Amain)
+[![ci](https://github.com/denisa/semantic-tag-helper/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/denisa/semantic-tag-helper/actions/workflows/ci.yaml?query=branch%3Amain)
 
 ## Summary
 
