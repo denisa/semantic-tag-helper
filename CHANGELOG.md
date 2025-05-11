@@ -23,6 +23,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 ### Fixed
 
 - Let the GITHUB_ACTOR be the Git user.
+- Disable `commitlint`.
 
 ## [1.0.10] - 2024-11-03
 
