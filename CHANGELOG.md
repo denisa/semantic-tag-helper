@@ -26,6 +26,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 - Disable `commitlint`.
 - Add missing CI badge for main.
 - Support workflow verbose mode.
+- Bump `shellcheck` to 0.10.0
 
 ## [1.0.10] - 2024-11-03
 
