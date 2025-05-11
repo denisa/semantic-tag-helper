@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-set -eu
+[ "${RUNNER_DEBUG}" == 1 ] && set -xv
+set -u
 
 function does_tag_exist() {
   local tag="$1"
