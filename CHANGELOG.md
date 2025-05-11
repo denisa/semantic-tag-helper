@@ -24,6 +24,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 - Let the GITHUB_ACTOR be the Git user.
 - Disable `commitlint`.
+- Add missing CI badge for main.
 
 ## [1.0.10] - 2024-11-03
 
