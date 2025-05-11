@@ -16,8 +16,8 @@ function set_tag() {
   local tag="$1"
   echo "Setting tag $tag"
 
-  git config user.name github-actions
-  git config user.email github-actions@github.com
+  git config user.name "${GITHUB_ACTOR}"
+  git config user.email "${GITHUB_ACTOR}@github.com"
 
   version="${tag%%-*}"
   preversion="${tag##*-}"
