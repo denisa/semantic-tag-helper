@@ -2,11 +2,8 @@
 name: ci
 on:
   push:
-    branches:
-      - '**'
-    tags-ignore:
-      - '*'
   pull_request:
+    types: [ opened, ready_for_review, reopened, synchronize ]
 
 permissions: {}
 
