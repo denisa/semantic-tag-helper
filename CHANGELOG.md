@@ -18,6 +18,14 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
   - `Fixed` for any bugfixes.
   - `Security` in case of vulnerabilities.
 
+## [1.0.12] - 2025-06-23
+
+### Fixed
+
+- Rely on Rulesets, not branch name, to decide when to validate the changelog.
+- Ignore `.idea`
+- Skip builds on draft pull request
+
 ## [1.0.11] - 2025-05-11
 
 ### Fixed
