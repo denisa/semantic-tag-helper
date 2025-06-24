@@ -24,6 +24,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 - Rely on Rulesets, not branch name, to decide when to validate the changelog.
 - Ignore `.idea`
+- Skip builds on draft pull request
 
 ## [1.0.11] - 2025-05-11
 
