@@ -39,7 +39,7 @@ jobs:
     steps:
       - id: gh-query
         env:
-          BRANCH: ${{ github.base_ref && github.base_ref || github.ref }}
+          BRANCH: ${{ github.base_ref && github.base_ref || github.ref_name }}
           GH_TOKEN: ${{ github.token }}
         run: |
           [ "${{ runner.debug }}" == 1 ] && set -xv
