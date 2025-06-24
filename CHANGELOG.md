@@ -23,6 +23,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 ### Fixed
 
 - Rely on Rulesets, not branch name, to decide when to validate the changelog.
+- Ignore `.idea`
 
 ## [1.0.11] - 2025-05-11
 
