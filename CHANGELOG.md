@@ -18,6 +18,12 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
   - `Fixed` for any bugfixes.
   - `Security` in case of vulnerabilities.
 
+## [1.0.12] - 2025-06-23
+
+### Fixed
+
+- Ignore `.idea`
+
 ## [1.0.11] - 2025-05-11
 
 ### Fixed
