@@ -18,6 +18,12 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
   - `Fixed` for any bugfixes.
   - `Security` in case of vulnerabilities.
 
+## [1.0.14] - 2025-06-28
+
+### Fixed
+
+- Merge `linter.yaml` with `ci.yaml`... remove link in `README.md`
+
 ## [1.0.13] - 2025-06-28
 
 ### Fixed
