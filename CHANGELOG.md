@@ -24,6 +24,8 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 - In scripts, rely on GitHub provided environment variables, not on context.
 - Skip all ci jobs for draft pull requests, and rely on job dependencies to control this
+- Merge `linter.yaml` with `ci.yaml`
+- Upgrade from `github/super-linter@v7` to `super-linter/super-linter@v7`
 
 ## [1.0.12] - 2025-06-23
 
