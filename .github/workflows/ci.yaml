@@ -39,13 +39,12 @@ jobs:
     steps:
       - id: gh-query
         env:
-          BRANCH: ${{ github.base_ref && github.base_ref || github.ref_name }}
           GH_TOKEN: ${{ github.token }}
         run: |
-          [ "${{ runner.debug }}" == 1 ] && set -xv
+          [ "${RUNNER_DEBUG}" == 1 ] && set -xv
           set -u
           
-          if gh ruleset check --repo "${{ github.repository }}" "${BRANCH}" | grep -q context:validate-release; then
+          if gh ruleset check --repo "${GITHUB_REPOSITORY}" "${GITHUB_BASE_REF:-$GITHUB_REF_NAME}" | grep -q context:validate-release; then
             echo "validate_in_list=true" >>"${GITHUB_OUTPUT}"
           fi
   validate-release:
