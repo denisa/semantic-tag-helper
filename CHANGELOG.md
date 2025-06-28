@@ -23,6 +23,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 ### Fixed
 
 - In scripts, rely on GitHub provided environment variables, not on context.
+- Skip all ci jobs for draft pull requests, and rely on job dependencies to control this
 
 ## [1.0.12] - 2025-06-23
 
