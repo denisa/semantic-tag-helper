@@ -104,7 +104,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 ### Fixed
 
 - uses the action.sh during own build
-- needs `${{ github.action*path }}` to execute correctly
+- needs `${{ github.action_path }}` to execute correctly
 - introduce super linter, and fixes all violations
 
 ## 1.0.3 - 2022-05-15 [YANKED]

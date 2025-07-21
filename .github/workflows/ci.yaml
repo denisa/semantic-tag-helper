@@ -18,7 +18,7 @@ jobs:
         with:
           fetch-depth: 0
       - run: cat .github/super-linter.env >> "$GITHUB_ENV"
-      - uses: super-linter/super-linter@v7
+      - uses: super-linter/super-linter@v8
         env:
           GITHUB_TOKEN: ${{ github.token }}
   test:
@@ -28,23 +28,21 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v5
-      - name: Validate the changelog
+      - name: "Validate the changelog"
         uses: denisa/clq-action@v1
         id: clq-validate
         with:
           changeMap: .github/clq/changemap.json
           mode: feature
-      - name: Echo changelog values
+      - name: "Echo changelog values"
         run: |
-          echo "$release_name"
-          echo "$release_tag -- $release_status"
-          echo "$body"
-        env:
-          release_tag: ${{ steps.clq-validate.outputs.tag }}
-          release_name: ${{ steps.clq-validate.outputs.name }}
-          release_status: ${{ steps.clq-validate.outputs.status }}
-          body: ${{ steps.clq-validate.outputs.changes }}
-      - name: Validate the tag has not yet been used
+          {
+            echo "# Changelog"
+            echo "## ${{ steps.clq-validate.outputs.name }}"
+            echo "${{ steps.clq-validate.outputs.tag }} -- ${{ steps.clq-validate.outputs.status }}"
+            echo "${{ steps.clq-validate.outputs.changes }}"
+          } >>"${GITHUB_STEP_SUMMARY}"
+      - name: "Validate the tag has not yet been used"
         run: ./action.sh test ${{ steps.clq-validate.outputs.tag }}
   is-target-branch-protected:
     if: ${{ ! github.event.pull_request.draft }}
@@ -70,13 +68,13 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v5
-      - name: Extract tag from the changelog
+      - name: "Extract tag from the changelog"
         uses: denisa/clq-action@v1
         id: clq-extract
         with:
           changeMap: .github/clq/changemap.json
           mode: release
-      - name: Validate the tag has not yet been used
+      - name: "Validate the tag has not yet been used"
         run: ./action.sh test ${{ steps.clq-extract.outputs.tag }}
   tag:
     if: github.event_name == 'push'
@@ -90,7 +88,7 @@ jobs:
         id: clq-extract
         with:
           changeMap: .github/clq/changemap.json
-      - name: Create tags
+      - name: "Create tags"
         run: ./action.sh set ${{ steps.clq-extract.outputs.tag }}
       - uses: ncipollo/release-action@v1
         with:
