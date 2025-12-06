@@ -22,5 +22,9 @@ MD026:
 MD029: false                  # Ordered list item prefix
 MD033: false                  # Allow inline HTML
 MD036: false                  # Emphasis used instead of a heading
+MD049:
+  style: asterisk
+MD050:
+  style: asterisk
 
 blank_lines: false            # Error on blank lines

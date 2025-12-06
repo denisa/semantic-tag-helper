@@ -18,6 +18,16 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
   - `Fixed` for any bugfixes.
   - `Security` in case of vulnerabilities.
 
+## [1.0.16] - 2025-12-06
+
+### Fixed
+
+- `Makefile` reads version of super-linter from `cy.yaml`
+- `Makefile` `lint` calls both `cql` and `super-linter`
+- Bump `koalaman/shellcheck` from 0.10.0 to 0.11.0
+- Disable `biome`, `black` and `ruff`
+- Update linting configurations
+
 ## [1.0.15] - 2025-08-24
 
 ### Fixed
