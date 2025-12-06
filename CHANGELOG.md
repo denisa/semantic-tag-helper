@@ -27,6 +27,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 - Bump `koalaman/shellcheck` from 0.10.0 to 0.11.0
 - Disable `biome`, `black` and `ruff`
 - Update linting configurations
+- Bump `actions/checkout` from 5 to 6
 
 ## [1.0.15] - 2025-08-24
 
