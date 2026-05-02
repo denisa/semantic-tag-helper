@@ -23,6 +23,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 ### Fixed
 
 - Bump `denisa/clq` from 1.8.23 to 1.8.28
+- Yanked releases still wrap the version number in square brackets.
 
 ## [1.0.16] - 2025-12-06
 
@@ -39,7 +40,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 ### Fixed
 
-- Bump actions/checkout from 4 to 5
+- Bump `actions/checkout` from 4 to 5
 
 ## [1.0.14] - 2025-06-28
 
@@ -70,7 +71,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 - Let the GITHUB_ACTOR be the Git user.
 - Disable `commitlint`.
-- Add missing CI badge for main.
+- Add missing CI badge for `main`.
 - Support workflow verbose mode.
 - Bump `shellcheck` to 0.10.0
 
@@ -97,54 +98,54 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 ### Fixed
 
-- Bumps github/super-linter from 5 to 6
+- Bumps `github/super-linter` from 5 to 6
 
 ## [1.0.6] - 2022-09-09
 
 ### Fixed
 
-- bump actions/checkout to v4 and use major version
-- minimize workflows permissions
+- Bump `actions/checkout` to v4 and use major version
+- Minimize workflows permissions
 
 ## [1.0.5] - 2022-09-09
 
 ### Fixed
 
-- use major version of ncipollo/release-action
-- bump actions/checkout to v4
-- bump superlinter to v5
-- introduce `make superlinter` and `make shellcheck` to run the tools locally
-- fix various superlinter error
+- Use major version of ncipollo/release-action
+- Bump `actions/checkout` to v4
+- Bump `super-linter` to v5
+- Introduce `make superlinter` and `make shellcheck` to run the tools locally
+- Fix various superlinter error
 
 ## [1.0.4] - 2022-05-24
 
 ### Fixed
 
-- uses the action.sh during own build
-- needs `${{ github.action_path }}` to execute correctly
-- introduce super linter, and fixes all violations
+- Uses `action.sh` during own build
+- Needs `${{ github.action_path }}` to execute correctly
+- Introduce `super-linter`, and fixes all violations
 
-## 1.0.3 - 2022-05-15 [YANKED]
-
-### Fixed
-
-- action.yml is not working reference wrong script
-
-## 1.0.2 - 2022-05-15 [YANKED]
+## [1.0.3] - 2022-05-15 [YANKED]
 
 ### Fixed
 
-- action.yml is not working
+- `action.yml` is not working reference wrong script
 
-## 1.0.1 - 2022-05-15 [YANKED]
+## [1.0.2] - 2022-05-15 [YANKED]
 
 ### Fixed
 
-- action.yml is not working
-- fix formatting
+- `action.yml` is not working
 
-## 1.0.0 - 2022-05-14 [YANKED]
+## [1.0.1] - 2022-05-15 [YANKED]
+
+### Fixed
+
+- `action.yml` is not working
+- Fix formatting
+
+## [1.0.0] - 2022-05-14 [YANKED]
 
 ### Added
 
-- test/set tag and derived tags
+- Test/set tag and derived tags
