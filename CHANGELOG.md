@@ -22,7 +22,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 ### Fixed
 
-- nothing at all
+- nothing else
 
 # [1.0.18] - 2026-05-03
 
