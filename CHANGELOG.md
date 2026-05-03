@@ -28,7 +28,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 ### Fixed
 
-- nothing
+- nothing much
 
 ## [1.0.17] - 2026-05-03
 
