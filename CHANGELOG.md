@@ -98,7 +98,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 ### Fixed
 
-- Bumps `github/super-linter` from 5 to 6
+- Bump `github/super-linter` from 5 to 6
 
 ## [1.0.6] - 2022-09-09
 
@@ -115,7 +115,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 - Bump `actions/checkout` to v4
 - Bump `super-linter` to v5
 - Introduce `make superlinter` and `make shellcheck` to run the tools locally
-- Fix various superlinter error
+- Fix various superlinter errors
 
 ## [1.0.4] - 2022-05-24
 
@@ -123,13 +123,13 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 
 - Uses `action.sh` during own build
 - Needs `${{ github.action_path }}` to execute correctly
-- Introduce `super-linter`, and fixes all violations
+- Introduce `super-linter` and fix all violations
 
 ## [1.0.3] - 2022-05-15 [YANKED]
 
 ### Fixed
 
-- `action.yml` is not working reference wrong script
+- `action.yml` is not working because it references the wrong script
 
 ## [1.0.2] - 2022-05-15 [YANKED]
 
