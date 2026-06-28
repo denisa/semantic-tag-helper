@@ -23,6 +23,7 @@ Categories, defined in [changemap.json](.github/clq/changemap.json)):
 ### Fixed
 
 - Bump `actions/checkout` from 6 to 7
+- Opt-in to selected super-linter linters.
 
 ## [1.0.17] - 2026-05-03
 
